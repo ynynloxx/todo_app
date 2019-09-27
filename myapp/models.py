@@ -11,6 +11,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 class ToDo(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, verbose_name=_('category_name'), null=True)
     todo_name = models.CharField(_('todo_name'), max_length=200)
