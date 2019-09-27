@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+
+from .models import Category, ToDo, Appointment
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the to-do index.")
+    todo = ToDo.objects.all()
+    appointment = Appointment.objects.all()
+    context = {'todos': todo, 'appointments': appointment}
+    return render(request, 'myapp/index.html', context)
