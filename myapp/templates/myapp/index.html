@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+
+<! --------------------------------------------- HEAD --------------------------------------------->
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/calendar_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/todo_styles.css' %}">
+    <style>
+        #calendar_div {
+            width: 80%;
+            float: right;
+        }
+
+        #todo_div {
+            width: 20%;
+            float: right;
+        }
+    </style>
 </head>
+
+<! --------------------------------------------- BODY --------------------------------------------->
 <body>
-    <div>
+    <div id="calendar_div">
+
 
     </div>
 
+    <div id="todo_div">
+
+    </div>
+
+    <script src="{% static 'script/calendar_script.js' %}"></script>
+    <script src="{% static 'script/todo_script.js' %}"></script>
 </body>
 </html>
